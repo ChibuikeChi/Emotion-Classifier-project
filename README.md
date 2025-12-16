@@ -23,3 +23,58 @@ Building a machine learning project like this requires a stack of specialized Py
 - Pandas (Data Management): Used for loading, manipulating, and cleaning the large dataset of text and emotion labels.
 - NumPy (Numerical Operations): Provides fast, efficient numerical arrays necessary for handling the high-dimensional data generated during feature extraction.
 - TfidfVectorizer (from sklearn): Feature ExtractionCrucial tool used to convert raw text into numerical features (TF-IDF vectors) that the machine learning model can process.
+
+The application is deployed using Streamlit, allowing users to interact with the trained model through a web interface.
+
+Step 1: Project Setup
+
+Ensure the following files are present in the project directory:
+
+  EmotionDotio.py
+  emotion_lstm_model.keras
+  emotion_tokenizer.json
+  emotion_features.joblib
+  requirements.txt
+
+The EmotionDotio.py file contains the Streamlit application code.
+
+Step 2: Create and Activate a Virtual Environment
+
+Open Command Prompt or Terminal and navigate to the project folder:  cd path\to\emotion_project
+Create a virtual environment:  python -m venv stenv
+Activate the environment:  stenv\Scripts\activate
+
+Once activated, (stenv) will appear in the terminal.
+
+Step 3: Install Required Dependencies
+
+Install all required libraries:
+pip install -r requirements.txt
+
+Typical dependencies include:
+streamlit
+tensorflow
+numpy
+joblib
+
+Step 4: Run the Streamlit Application Locally
+
+Start the application by running:
+streamlit run EmotionDotio.py
+Streamlit will automatically open the application in a browser at:
+http://localhost:8501
+Users can now enter text and receive emotion predictions.
+
+Step 5: Deploy the App Using Streamlit Community Cloud
+
+Push the project to a GitHub repository
+Visit https://share.streamlit.io
+Sign in with GitHub
+Select the repository and the main file (EmotionDotio.py)
+Click Deploy
+Streamlit will build the application and provide a public URL.
+
+Step 6: Access the Deployed App
+
+Once deployed, the app can be accessed from any browser using the provided Streamlit URL.
+No local Python installation is required for end users.
